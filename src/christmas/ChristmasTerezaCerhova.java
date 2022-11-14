@@ -1,8 +1,8 @@
-package christmas;
+package christmasterezacerhova;
 //Cerhova Tereza M2200141
 import java.util.Scanner;
 
-public class Christmas {
+public class ChristmasTerezaCerhova {
     static Scanner sc = new Scanner(System.in);
     
     public static void main(String[] args) {
