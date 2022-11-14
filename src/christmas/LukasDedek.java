@@ -191,7 +191,7 @@ private static void noCover() {
     }  
         System.out.println("");
         
-        if ((p == ((size+1)/2)-2) | (size == 1)) {
+        if ((p == ((size+1)/2)-1)) {
             System.out.print("     ■■     ");
             for (int i = 0; i < 30; i++) {
             System.out.print("☐");
