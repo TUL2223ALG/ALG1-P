@@ -1,5 +1,7 @@
 package week09_array;
 
+import java.util.Arrays;
+
 public final class ArrayTools {
     private ArrayTools(){
         
@@ -139,9 +141,46 @@ public final class ArrayTools {
         }
     }
     
+    //TO CHECK
+    public class Random {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  System.out.println("pocet hodnot: ");
+  int pocet = sc.nextInt();
+  pocet = pocet +2;
+  System.out.println("min hodnota: ");
+  int min = sc.nextInt();
+  System.out.println("max hodnota: ");
+  int max =sc.nextInt();
+  int[] a = new int[pocet];
+a[0] = (int)(Math.random()*(max-min+1)+min);
+  
+  for(int i=0;i<pocet;i++){          
+     for(int j=0;j<i;j++){
+         if(a[i]==a[j]){
+             a[i] = (int)(Math.random()*(max-min+1)+min);
+             j=0;        
+         }
+     }
+     if(i>1){
+     System.out.println((i-1 )+". "+a[i]);
+     }
+  }
+  
+  
+    }
+    
+}
+    
     //testing main
     public static void main(String[] args) {
-        int [] myArray = {1,8,6,2}; //staticka inicializace konkretnimi hodnotami
+        int [] myArray = {1,2,4,8}; //staticka inicializace konkretnimi hodnotami
+        System.out.println(Arrays.binarySearch(myArray, 9));
+                
         UI.display(myArray);
         reverse(myArray);
         UI.display(myArray);
