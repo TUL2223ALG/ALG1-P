@@ -32,4 +32,12 @@ public class UI {
         System.out.print(a[a.length - 1] + "]\n");
     }
     
+    public static void displayCounts(int[] a){ // index a hodnotu na indexu a jenom tam, kde neni
+        for (int i = 0; i < a.length; i++) { 
+            if(a[i] != 0){
+                System.out.println(i + " " + a[i] + "x");
+            }
+        }
+    }
+    
 }
