@@ -98,6 +98,112 @@ public class MatrixTools {
     	}
     	return isStochastic;
     }
+    
+    public static boolean isHorizontalSym(int[][] a){
+        boolean horSym = true;
+        for (int i = 0; i < a.length / 2 && horSym; i++) {
+            for (int j = 0; j < a[i].length && horSym; j++) {
+                if (a[i][j] != a[a.length - 1 - i][j]) {
+                    horSym = false;
+                }
+            }
+        }
+        return horSym;
+    }
+    
+    public static boolean isVerticalSym(int[][] a){
+        boolean verSym = true;
+        for (int i = 0; i < a.length && verSym; i++) {
+            for (int j = 0; j < a[i].length / 2 && verSym; j++) {
+                if (a[i][j] != a[i][a[i].length-1-j]) {
+                    verSym = false;
+                }
+            }
+        }
+        return verSym;
+    }
+    
+    public static boolean isMainDiagonalSym(int[][] a){
+        boolean mainDiagSym = true;
+        for (int i = 1; i < a.length && mainDiagSym; i++) {
+            for (int j = 0; j < i && mainDiagSym; j++) {
+                if (a[i][j] != a[j][i]) {
+                    mainDiagSym = false;
+                }
+            }
+        }
+        return mainDiagSym;
+    }
+    
+    public static boolean isOtherDiagonalSym(int[][] a){
+        boolean otherDiagSym = true;
+        for (int i = 0; i < a.length - 1 && otherDiagSym; i++) {
+            for (int j = a[i].length-2 -i ; j < 0 && otherDiagSym; j++) {
+                if (a[i][j] != a[a.length-1 - j][a[i].length - 1 - i]) {
+                    otherDiagSym = false;
+                }
+            }
+        }
+        return otherDiagSym;
+    }
+    
+    public static int sumMainDiagonal(int[][] a){
+        int sum = 0;
+        for (int i = 0; i < a.length; i++) {
+                    sum = sum + a[i][i];               
+        }
+        return sum;
+    }
+    
+    public static int sumOtherDiagonal(int[][] a){
+        int sum = 0;
+        for (int i = 0; i < a.length; i++) {
+                    sum = sum + a[i][a.length-1-i];               
+        }
+        return sum;
+    }
+    
+    public static boolean areSameRows(int[][] matrix){
+        boolean areSame = true;
+        int sum;
+        int firstSum = 0;
+        //int[] sums = new int[matrix.length];
+        for (int i = 0; i < matrix.length && areSame; i++) { //m
+            sum = 0;
+            for (int j = 0; j < matrix[i].length; j++) { //n
+                 sum = sum + matrix[i][j];
+            }
+            //sums[i] = sum;
+            if(i == 0){
+                firstSum = sum;
+            } else {
+                if(sum != firstSum){
+                    areSame = false;
+                }
+            }
+        }       
+//        firstSum = sums[0];
+//        for (int i = 1; i < sums.length && areSame; i++) {
+//            if(sums[i] != firstSum){
+//                areSame = false;
+//            }
+//            
+//        }
+        
+        return areSame;
+    }
+    
+    
+    public static boolean isHorizontalSym1(int[][] a){
+        for (int i = 0; i < a.length / 2; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                if (a[i][j] != a[a.length - 1 - i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
    
         //testing
     public static void main(String[] args) {
