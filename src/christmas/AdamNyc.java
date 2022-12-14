@@ -1,4 +1,3 @@
-
 package christmas;
 
 //Popis:

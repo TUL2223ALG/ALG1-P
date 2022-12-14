@@ -1,4 +1,4 @@
-package christmasterezacerhova;
+package christmas;
 //Cerhova Tereza M2200141
 import java.util.Scanner;
 
