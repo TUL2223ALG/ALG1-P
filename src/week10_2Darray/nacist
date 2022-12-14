@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication37;
+import java.util.Scanner; 
+
+public class JavaApplication37 {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int size = 10, i = 0;
+        int[] arr = new int[size];
+        int number = scan.nextInt();
+        while (number > 0 ) {
+            if(i==size){
+                arr = addSize(arr, size);
+                size *= 2;
+            }
+            arr[i] = number;
+            i++;
+            number = scan.nextInt();
+        }
+        for(int j = 0; j<i; j++){
+            System.out.print(arr[j]+" ");
+        }
+    }
+    
+    public static int[] addSize(int[] arr, int size){
+        int[] temp = new int[size*2];
+        for(int i = 0; i<size; i++){
+            temp[i] = arr[i];
+        }
+        return temp;
+    }
+    }
