@@ -1,4 +1,5 @@
-package christmas;
+package christmas.danieladamek;
+import christmas.danieladamek.PairDanielAdamek;
 import java.util.Scanner;
 
 public class VanoceDanielAdamek {

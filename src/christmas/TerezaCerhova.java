@@ -2,7 +2,7 @@ package christmasterezacerhova;
 //Cerhova Tereza M2200141
 import java.util.Scanner;
 
-public class ChristmasTerezaCerhova {
+public class TerezaCerhova {
     static Scanner sc = new Scanner(System.in);
     
     public static void main(String[] args) {

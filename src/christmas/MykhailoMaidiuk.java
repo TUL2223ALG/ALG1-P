@@ -1,7 +1,7 @@
 package christmas;
 import java.util.Scanner;
 
-public class Mykhailo_Maidiuk {
+public class MykhailoMaidiuk {
 	
 	static int color;
 	static int n;

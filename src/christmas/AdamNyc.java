@@ -9,7 +9,7 @@ package christmas;
 
 import java.util.Scanner;
 
-public class Vanocni_Uloha_Adam_Nyc {
+public class AdamNyc {
    
     public static void main(String[] args) {
         

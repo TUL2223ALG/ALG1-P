@@ -1,4 +1,4 @@
-package christmas;
+package christmas.danieladamek;
 
 public class PairDanielAdamek<K> {
     public K first;

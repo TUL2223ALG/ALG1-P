@@ -1,5 +1,5 @@
 
-package newpackage;
+package christmas;
 import java.util.Scanner;
 /**
  *

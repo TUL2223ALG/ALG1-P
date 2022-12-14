@@ -1,3 +1,5 @@
+package christmas.ondrejvesely;
+
 
 import javax.swing.*;
 import java.util.concurrent.TimeUnit;
